@@ -30,10 +30,13 @@ Before you can run analysis on the cluster, you'll need to set up an environment
 to navigate to your home folder
 3. `module load Anaconda3/2.1.0-fasrc01`  
 to switch to Python 3 (with most packages - numpy, scipy, scikit-image, matplotlib, pandas, etc. - already implemented)
-4. `pip3 install numpy`  
-to update to the newest version of numpy (the one installed here is a couple of updates behind, and I had to use functions from a newer version of python)
-5. `conda create -n PYTO_SEG_ENV --clone="$PYTHON_HOME"`  
+4. `conda create -n PYTO_SEG_ENV --clone="$PYTHON_HOME"`  
 This will save the new "python environment" that you've just made as PYTO_SEG_ENV. From now on, to switch to python 3 on the cluster you'll just need to run `source activate PYTO_SEG_ENV`. However, _you never need to do this at the login node:_ it just needs to be in your .sh submission script (see all of the submission scripts in this repo)
+5. `conda install numpy`  
+to update to the newest version of numpy (the one installed here is a couple of updates behind, and I had to use functions from a newer version of python)
+6. `conda install scikit-image`  
+to update scikit-image.
+
 
 
 Last updated: 10.10.2017
