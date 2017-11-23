@@ -34,11 +34,13 @@ to switch to Python 3 (with most packages - numpy, scipy, scikit-image, matplotl
 This will create a new "python environment" called PYTO_SEG_ENV. We need to do this because we need to update a few python packages beyond what's currently installed on the cluster.
 5. `source activate PYTO_SEG_ENV`  
 This will activate the new python environment you just made.
-6. `conda install numpy`  
+6. `conda install pandas`
+to update to the newest version of pandas. __important__: This must be done before step 7, or else you will have to repeat step 7 after completing this installation.
+7. `conda install numpy`  
 to update to the newest version of numpy (the one installed here is a couple of updates behind, and I had to use functions from a newer version of python)
-7. `conda install scikit-image`  
+8. `conda install scikit-image`  
 to update to the newest version of scikit-image, which has a bunch of image file loading and saving functions that we use. The old version on the cluster can't handle some of the file formats we use. This will take a while because it needs to update a whole bunch of other packages.
-8. Set up your account so that it automatically activates your python environment every time you log into the cluster. This way you don't need to do it every time you log in before running our scripts.
+9. Set up your account so that it automatically activates your python environment every time you log into the cluster. This way you don't need to do it every time you log in before running our scripts.
     1. If you're not already there, switch to your home folder:  
     `cd ~`
     2. Open up your .bash_profile file, which tells the cluster what to do upon startup:  
